@@ -1,0 +1,15 @@
+# React / Node
+node_modules/
+dist/
+tracker-ui/.env
+tracker-ui/.env.local
+
+# Python
+__pycache__/
+worker/.env
+venv/
+.venv/
+
+# IDE & System
+.vscode/
+.DS_Store

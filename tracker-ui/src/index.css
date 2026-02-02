@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Custom Theme Refinements */
+@theme {
+  --font-sans: "Inter", "system-ui", "sans-serif";
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    background-color: #050505;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom "Dark Mode" Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #18181b;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #27272a;
+  }
+}
+
+/* Custom Animation for the "Live" pulse */
+@keyframes slow-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-slow-pulse {
+  animation: slow-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
